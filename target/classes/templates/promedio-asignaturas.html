@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de Asignaturas</title>
+	<link rel="icon" href="/assets/img/UTS.png" />
+	<link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body>
+	<header>
+			<!--<a href="#">
+				<img src="/assets/img/gov_co.png" class="banner-img">
+			</a>
+			<div class="contenedor-busqueda">
+				<form action="#">
+					<input type="text" id="busqueda" placeholder="Buscar...">
+					<button type="submit">Buscar</button>
+				</form>
+			</div>-->
+		</header>
+		<nav>
+			<div class="nav-container">
+				<div class="container-logo">
+					<img src="/assets/img/logo_uts.png" class="nav-logo">
+				</div>
+				<a href="#">¡Promedio nacional!</a>
+			</div>
+		</nav>
+		<hr class="div-area">
+	<div class="promedio-container">
+    <p>Comunicación Escrita: <span th:text="${promedioCE}"></span></p>
+    <p>Razonamiento Cuantitativo: <span th:text="${promedioRC}"></span></p>
+    <p>Lectura Critica: <span th:text="${promedioLC}"></span></p>
+    <p>Competencias Ciudadanas: <span th:text="${promedioCC}"></span></p>
+    <p>Ingles: <span th:text="${promedioEN}"></span></p>
+    <p>Formulación de proyectos de ingenieria: <span th:text="${promedioFPI}"></span></p>
+    <p>Pensamiento Cientifico y Matematica Estadistica: <span th:text="${promedioPCME}"></span></p>
+    <p>Diseño de Software: <span th:text="${promedioDS}"></span></p>
+	<br>
+	<!--<a th:href="@{/coordinador/login}" class="btn-salir-prom">Cerra sesión</a>-->
+	</div>
+
+</body>
+</html>

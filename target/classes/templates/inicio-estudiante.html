@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/assets/img/UTS.png" />
+	<link rel="stylesheet" href="/assets/css/home.css">
+	<title>	Saber PRO-estudiante</title>
+</head>
+
+<body>
+	<header>
+		<!--<a href="#">
+			<img src="/assets/img/gov_co.png" class="banner-img">
+		</a>
+		<div class="contenedor-busqueda">
+			<form action="#">
+				<input type="text" id="busqueda" placeholder="Buscar...">
+				<button type="submit">Buscar</button>
+			</form>
+		</div>-->
+	</header>
+	<nav>
+		<div class="nav-container">
+			<div class="container-logo">
+				<img src="/assets/img/logo_uts.png" class="nav-logo">
+			</div>
+			<a href="#">¡Bienvenido estudiante!**<span th:text="${estudiante.primer_nombre}"></span>**</a>
+		</div>
+	</nav>
+	<hr>
+	<main class="card results">
+		<div class="result-info">
+			<div class="personal-info">
+				<p><strong>Cédula:</strong> <span th:text="${estudiante.cedula}"></span></p>
+				<p><strong>Apellidos:</strong> <span th:text="${estudiante.apellidos}"></span></p>
+				<p><strong>Primer Nombre:</strong> <span th:text="${estudiante.primer_nombre}"></span></p>
+				<p><strong>Segundo Nombre:</strong> <span th:text="${estudiante.segundo_nombre}"></span></p>
+				<p><strong>Email:</strong> <span th:text="${estudiante.email}"></span></p>
+				<p><strong>Teléfono:</strong> <span th:text="${estudiante.telefono}"></span></p>
+				<p><strong>Registro:</strong> <span th:text="${estudiante.registro}"></span></p>
+			</div>
+			<div class="test-results">
+				<p><strong>Puntaje UTS:</strong> <span th:text="${estudiante.puntaje}"></span></p>
+				<p><strong>Comunicación Escrita:</strong> <span th:text="${estudiante.CE}"></span></p>
+				<p><strong>Razonamiento Cuantitativo:</strong> <span th:text="${estudiante.RC}"></span></p>
+				<p><strong>Lectura Critica:</strong> <span th:text="${estudiante.LC}"></span></p>
+				<p><strong>Competencias Ciudadanas:</strong> <span th:text="${estudiante.CC}"></span></p>
+				<p><strong>Ingles:</strong> <span th:text="${estudiante.EN}"></span></p>
+				<p><strong>Formulación Proyectos Ingenieria:</strong> <span th:text="${estudiante.FPI}"></span></p>
+				<p><strong>Pensamiento Cientifico y Matematica Estadistica:</strong> <span th:text="${estudiante.PCME}"></span></p>
+				<p><strong>Diseño Software:</strong> <span th:text="${estudiante.DS}"></span></p>
+			</div>
+			<div class="level-results">
+				<p><strong>Nivel de Puntaje:</strong> <span th:text="${estudiante.nivel_puntaje}"></span></p>
+				<p><strong>Nivel de Comunicación Escrita:</strong> <span th:text="${estudiante.lvlCE}"></span></p>
+				<p><strong>Nivel de Razonamiento Cuantitativo:</strong> <span th:text="${estudiante.lvlRC}"></span></p>
+				<p><strong>Nivel de Lectura Critica:</strong> <span th:text="${estudiante.lvlLC}"></span></p>
+				<p><strong>Nivel de Competencias Ciudadanas:</strong> <span th:text="${estudiante.lvlCC}"></span></p>
+				<p><strong>Nivel de Ingles:</strong> <span th:text="${estudiante.lvlEN}"></span></p>
+				<p><strong>Nivel de Formulación de proyectos de ingenieria:</strong> <span th:text="${estudiante.lvlFPI}"></span></p>
+				<p><strong>Nivel de Pensamiento Cientifico y Matematica Estadistica:</strong> <span th:text="${estudiante.lvlPCME}"></span></p>
+				<p><strong>Nivel de Diseño de Software:</strong> <span th:text="${estudiante.lvlDS}"></span></p>
+				<p><strong>Categoría de Ingles:</strong> <span th:text="${estudiante.categoryEN}"></span></p>
+			</div>
+		</div>
+	</main>
+	<a th:href="@{/estudiante/ranking}" class="btn-salir">Ver ranking</a>
+	<a th:href="@{/estudiante/}" class="btn-salir">Regresar</a>
+	<!--<a th:href="@{/estudiante/promedio-asignaturas}" class="btn-salir">Ver promedio</a>-->
+</body>
+
+</html>
