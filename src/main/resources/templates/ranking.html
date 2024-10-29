@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">	
+	<link rel="icon" href="/assets/img/UTS.png" />
+	<link rel="stylesheet" href="/assets/css/home.css">
+    <title>Ranking de Estudiantes</title>
+    
+</head>
+<body>
+	<nav>
+			<div class="nav-container">
+				<div class="container-logo">
+					<img src="/assets/img/logo_uts.png" class="nav-logo">
+				</div>
+				<a href="#">¡Ranking Estudiantes!</a>
+	
+			</div>
+		</nav>
+	<main class="table-container">
+    <h1>Ranking de Estudiantes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Puesto</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Promedio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="estudiante, iterStat : ${estudiantes}">
+                <td th:text="${iterStat.count}"></td>
+                <td th:text="${estudiante.primer_nombre}"></td> <!-- Ajusta al nombre exacto de la propiedad -->
+                <td th:text="${estudiante.apellidos}"></td> <!-- Ajusta al nombre exacto de la propiedad -->
+                <td th:text="${estudiante.promedio}"></td> <!-- Asegúrate de que esta propiedad exista y esté calculada -->
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/}" class="btn-salir">Regresar</a>
+	</main>
+</body>
+</html>

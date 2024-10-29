@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/assets/img/UTS.png" />
+	<link rel="stylesheet" href="/assets/css/home.css">
+	<title> Saber PRO-coordinador</title>
+</head>
+
+<body>
+	<header>
+		<!--<a href="#">
+			<img src="/assets/img/gov_co.png" class="banner-img">
+		</a>
+		<!<div class="contenedor-busqueda">
+			<form action="#">
+				<input type="text" id="busqueda" placeholder="Buscar...">
+				<button type="submit">Buscar</button>
+			</form>
+		</div>-->
+	</header>
+	<nav>
+		<div class="nav-container">
+			<div class="container-logo">
+				<img src="/assets/img/logo_uts.png" class="nav-logo">
+			</div>
+			<a href="#">¡Bienvenido coordinador!</a>
+
+		</div>
+	</nav>
+	<hr>
+	<main class="table-container">
+		<h1>Estudiantes Clasificados SABER PRO</h1>
+		<br>
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Tipo Documento:</th>
+						<th scope="col"># Documento</th>
+						<th scope="col">Apellidos</th>
+						<th scope="col">1° nombre</th>
+						<th scope="col">2° nombre</th>
+						<th scope="col">Email</th>
+						<th scope="col"># Telefono</th>
+						<th scope="col"># Registro</th>
+						<th scope="col">Puntaje</th>
+						<th scope="col">Saber Pro Nivel</th>
+						<th scope="col">Detalles</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="estudiante : ${estudiante}">
+						<td>CC</td>
+						<td th:text="${estudiante.cedula}"></td>
+						<td th:text="${estudiante.apellidos}"></td>
+						<td th:text="${estudiante.primer_nombre}"></td>
+						<td th:text="${estudiante.segundo_nombre}"></td>
+						<td th:text="${estudiante.email}"></td>
+						<td th:text="${estudiante.telefono}"></td>
+						<td th:text="${estudiante.registro}"></td>
+						<td th:text="${estudiante.puntaje}"></td>
+						<td th:text="${estudiante.nivel_puntaje}"></td>
+						<td>
+							<a th:href="@{'/coordinador/editar/' + ${estudiante.cedula}}" >Editar</a>
+							<a th:href="@{'/coordinador/borrar/' + ${estudiante.cedula}}" >Borrar</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<a href="/coordinador/agregar" class="btn-salir">Agregar Estudiante</a>
+		<a th:href="@{/estudiante/ranking}" class="btn-salir">Ver ranking</a>
+		<a th:href="@{/coordinador/}" class="btn-salir">Regresar</a>
+
+	</main>
+
+</body>
+
+</html>

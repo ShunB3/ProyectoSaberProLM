@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <link rel="stylesheet" href="/assets/css/home.css">
+	      <link rel="icon" href="/assets/img/UTS.png" />
+    <title>Registro de Coordinadores</title>
+</head>
+<body>
+	<header>
+	        <!--<a href="#">
+	            <img src="/assets/img/gov_co.png" class="banner-img">
+	        </a>
+	        <div class="contenedor-busqueda">
+	            <form action="#">
+	                <input type="text" id="busqueda" placeholder="Buscar...">
+	                <button type="submit">Buscar</button>
+	            </form>
+	        </div>-->
+	    </header>
+	    <nav>
+	        <div class="nav-container">
+	            <div class="container-logo">
+	                <img src="/assets/img/logo_uts.png" class="nav-logo">
+	            </div>
+				<a th:href="@{/coordinador/}">Coordinadores</a>
+				<a th:href="@{/estudiante/}">Estudiantes</a>
+	        </div>
+	    </nav>
+	    <hr>
+	<main class="form-registro">
+    <form th:action="@{/coordinador/registro}" method="post">
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required>
+        <br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+        <br>
+        <label for="primer_nombre">Primer Nombre:</label>
+        <input type="text" id="primer_nombre" name="primer_nombre" required>
+        <br>
+		<label for="segundo_nombre">Segundo Nombre:</label>
+		<input type="text" id="segundo_nombre" name="segundo_nombre" required>
+		<br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+        <br>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+        <br>
+        <label for="institucion">Institución:</label>
+        <input type="text" id="institucion" name="institucion" required>
+        <br>
+        <input type="submit" value="Registrar">
+    </form>
+	</main>
+</body>
+</html>

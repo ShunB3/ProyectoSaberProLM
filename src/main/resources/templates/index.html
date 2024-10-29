@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/img/UTS.png" />
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <title>Saber PRO</title>
+</head>
+
+<body>
+    <header>
+        <!--<a href="#">
+            <img src="/assets/img/gov_co.png" class="banner-img">
+        </a>
+        <div class="contenedor-busqueda">
+            <form action="#">
+                <input type="text" id="busqueda" placeholder="Buscar...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>-->
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="container-logo">
+                <img src="/assets/img/logo_uts.png" class="nav-logo">
+            </div>
+			<a th:href="@{/coordinador/}">Coordinadores</a>
+			<a th:href="@{/estudiante/}">Estudiantes</a>
+        </div>
+    </nav>
+    <hr>
+    <!--<main>
+        <div class="img-icfes">
+            <img src="/assets/img/icfes-logo.png" alt="">
+        </div>
+		<div class="container-form">
+		    <h2>Coordinador</h2>
+		    <form th:action="@{/coordinador/login}" method="post">
+				<p th:if="${mensaje}" style="color: red;">Error, contraseña o cédula incorrectas</p>
+		        <input type="text" name="cedula" placeholder="Ingresa tu cedula de coordinador">
+		        <input type="password" name="contraseña" placeholder="Ingresa tu contraseña">
+				<input type="submit" value="Iniciar sesión">
+				<a th:href="@{registro}">¿No tienes cuenta? Registrate aquí</a>
+		    </form>
+		</div>
+    </main>-->
+</body>
+
+</html>

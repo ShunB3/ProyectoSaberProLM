@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/assets/img/UTS.png" />
+	<link rel="stylesheet" href="/assets/css/home.css">
+	<title> Registro de Estudiantes</title>
+</head>
+
+<body>
+	<header>
+		<!--<a href="#">
+			<img src="/assets/img/gov_co.png" class="banner-img">
+		</a>
+		<div class="contenedor-busqueda">
+			<form action="#">
+				<input type="text" id="busqueda" placeholder="Buscar...">
+				<button type="submit">Buscar</button>
+			</form>
+		</div>-->
+	</header>
+	<nav>
+		<div class="nav-container">
+			<div class="container-logo">
+				<img src="/assets/img/logo_uts.png" class="nav-logo">
+			</div>
+			<a href="#">¡Agregar Estudiante!</a>
+		</div>
+	</nav>
+	<hr>
+	<main class="form-student-container">
+		<form action="/coordinador/guardar" method="post" th:object="${estudiante}" class="form-estudiante">
+			<div class="input-form">
+				<label for="id">Id:</label>
+				<input type="text" id="id" name="id" th:field="*{id}" required>
+			</div>
+			<div class="input-form">
+				<label for="cedula">Cédula:</label>
+				<input type="text" id="cedula" name="cedula" th:field="*{cedula}" required>
+			</div>
+			<div class="input-form">
+				<label for="contrasena">Contraseña:</label>
+				<input type="password" id="contrasena" name="contrasena" th:field="*{contrasena}" required>
+			</div>
+			<div class="input-form">
+				<label for="apellidos">Apellidos:</label>
+				<input type="text" id="apellidos" name="apellidos" th:field="*{apellidos}" required>
+			</div>
+			<div class="input-form">
+				<label for="primer_nombre">Primer Nombre:</label>
+				<input type="text" id="primer_nombre" name="primer_nombre" th:field="*{primer_nombre}" required>
+			</div>
+			<div class="input-form">
+				<label for="segundo_nombre">Segundo Nombre:</label>
+				<input type="text" id="segundo_nombre" name="segundo_nombre" th:field="*{segundo_nombre}">
+			</div>
+			<div class="input-form">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" th:field="*{email}" required>
+			</div>
+			<div class="input-form">
+				<label for="telefono">Teléfono:</label>
+				<input type="tel" id="telefono" name="telefono" th:field="*{telefono}" required>
+			</div>
+			<div class="input-form">
+				<label for="registro">Registro:</label>
+				<input type="text" id="registro" name="registro" th:field="*{registro}" required>
+			</div>
+			<div class="input-form">
+				<label for="puntaje">Puntaje:</label>
+				<input type="text" id="puntaje" name="puntaje" th:field="*{puntaje}" required>
+			</div>
+			<div class="input-form">
+				<label for="nivel_puntaje">Nivel Puntaje:</label>
+				<input type="text" id="nivel_puntaje" name="nivel_puntaje" th:field="*{nivel_puntaje}" required
+					readonly>
+			</div>
+			<div class="input-form">
+				<label for="CE">Comunicación Escrita:</label>
+				<input type="number" id="CE" name="CE" th:field="*{CE}">
+			</div>
+			<div class="input-form">
+				<label for="RC">Razonamiento Cuantitativo:</label>
+				<input type="number" id="RC" name="RC" th:field="*{RC}">
+			</div>
+			<div class="input-form">
+				<label for="LC">Lectura Crítica:</label>
+				<input type="number" id="LC" name="LC" th:field="*{LC}">
+			</div>
+			<div class="input-form">
+				<label for="CC">Competencias Ciudadanas:</label>
+				<input type="number" id="CC" name="CC" th:field="*{CC}">
+			</div>
+			<div class="input-form">
+				<label for="EN">Inglés:</label>
+				<input type="number" id="EN" name="EN" th:field="*{EN}">
+			</div>
+			<div class="input-form">
+				<label for="FPI">Formulación Proyectos Ingeniería:</label>
+				<input type="number" id="FPI" name="FPI" th:field="*{FPI}">
+			</div>
+			<div class="input-form">
+				<label for="PCME">Pensamiento Científico y Matemática Estadística:</label>
+				<input type="number" id="PCME" name="PCME" th:field="*{PCME}">
+			</div>
+			<div class="input-form">
+				<label for="DS">Diseño de Software:</label>
+				<input type="number" id="DS" name="DS" th:field="*{DS}">
+			</div>
+			<div class="input-form">
+				<label for="lvlCE">Nivel de Comunicación Escrita:</label>
+				<input type="text" id="lvlCE" name="lvlCE" th:field="*{lvlCE}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="lvlRC">Nivel de Razonamiento Cuantitativo:</label>
+				<input type="text" id="lvlRC" name="lvlRC" th:field="*{lvlRC}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="lvlLC">Nivel de Lectura Crítica:</label>
+				<input type="text" id="lvlLC" name="lvlLC" th:field="*{lvlLC}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="lvlCC">Nivel de Competencias Ciudadanas:</label>
+				<input type="text" id="lvlCC" name="lvlCC" th:field="*{lvlCC}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="lvlEN">Nivel de Inglés:</label>
+				<input type="text" id="lvlEN" name="lvlEN" th:field="*{lvlEN}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="lvlFPI">Nivel de Formulación Proyectos Ingeniería:</label>
+				<input type="text" id="lvlFPI" name="lvlFPI" th:field="*{lvlFPI}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="lvlPCME">Nivel de Pensamiento Científico y Matemática Estadística:</label>
+				<input type="text" id="lvlPCME" name="lvlPCME" th:field="*{lvlPCME}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="lvlDS">Nivel de Diseño de Software:</label>
+				<input type="text" id="lvlDS" name="lvlDS" th:field="*{lvlDS}" readonly required>
+			</div>
+			<div class="input-form">
+				<label for="categoryEN">Categoría de Inglés:</label>
+				<input type="text" id="categoryEN" name="categoryEN" th:field="*{categoryEN}" required>
+			</div>
+			<input type="submit" value="Guardar">
+		</form>
+	</main>
+	<a th:href="@{/coordinador/inicio}" class="btn-salir">Regresar</a>
+	<script>
+
+		// Puntaje icfes
+		document.getElementById("puntaje").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "INVALIDO";
+			}
+
+			document.getElementById("nivel_puntaje").value = nivel;
+		});
+
+		// Comunicación Escrita
+		document.getElementById("CE").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "--";
+			}
+
+			document.getElementById("lvlCE").value = nivel;
+		});
+
+		// Razonamiento Cuantitativo
+		document.getElementById("RC").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "--";
+			}
+
+			document.getElementById("lvlRC").value = nivel;
+		});
+
+		// Lectura Crítica
+		document.getElementById("LC").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "--";
+			}
+
+			document.getElementById("lvlLC").value = nivel;
+		});
+
+		// Competencias Ciudadanas
+		document.getElementById("CC").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "--";
+			}
+
+			document.getElementById("lvlCC").value = nivel;
+		});
+
+		// Inglés
+		document.getElementById("EN").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+			var categoria = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1", categoria = "A0";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2", categoria = "A1";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3", categoria = "B1";
+			} else {
+				nivel = "--", categoria = "--";
+			}
+
+			document.getElementById("lvlEN").value = nivel;
+			document.getElementById("categoryEN").value = categoria;
+
+		});
+
+		// Formulación Proyectos Ingeniería
+		document.getElementById("FPI").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "--";
+			}
+
+			document.getElementById("lvlFPI").value = nivel;
+		});
+
+		// Pensamiento Científico y Matemática Estadística
+		document.getElementById("PCME").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "--";
+			}
+
+			document.getElementById("lvlPCME").value = nivel;
+		});
+
+		// Diseño de Software
+		document.getElementById("DS").addEventListener("input", function () {
+			var puntaje = parseInt(this.value);
+			var nivel = "";
+
+			if (puntaje >= 0 && puntaje < 125) {
+				nivel = "Nivel 1";
+			} else if (puntaje >= 125 && puntaje < 150) {
+				nivel = "Nivel 2";
+			} else if (puntaje >= 150) {
+				nivel = "Nivel 3";
+			} else {
+				nivel = "--";
+			}
+
+			document.getElementById("lvlDS").value = nivel;
+		});
+	</script>
+
+</body>
+
+</html>

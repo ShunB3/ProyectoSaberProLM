@@ -1,0 +1,443 @@
+
+body {
+            background-image: url('/assets/img/fondo_uts.jpeg'); /* Coloca la ruta de tu imagen */
+            background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* La imagen se queda fija mientras se hace scroll */
+        }
+/*/////////////////////////////////////////////////////////////////*/
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Verdana;
+}
+
+/*header {
+	background-color: rgb(128, 255, 0);
+	display: flex;
+	align-items: center;
+}*/
+
+.banner-img {
+	width: 200px;
+	height: auto;
+	padding: 10px 10px 10px 30px;
+}
+
+/*.contenedor-busqueda {
+	width: 400px;
+	margin: 0 auto;
+	border-radius: 5px;
+	padding: 10px;
+}*/
+
+/*#busqueda {
+	padding: 8px;
+	border: 1px;
+	border-radius: 3px;
+	font-size: 16px;
+	opacity: 1;
+	outline: none;
+	opacity: 0.9;
+}*/
+
+button[type="submit"] {
+	padding: 10.6px 15px;
+	background-color: rgb(0, 128, 64);
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	opacity: 0.9;
+	transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+	background-color: rgb(0, 128, 0);
+}
+
+.nav-container {
+	display: flex;
+	margin: 10px 0 0 0;
+	padding: 12px 0 12px 0;
+	background-color: #ffffff;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-logo {
+	width: 180px;
+	height: auto;
+}
+
+.nav-container a {
+	padding: 0 30px 0px 30px;
+	text-decoration: none;
+	font-size: 20px;
+	color: rgb(0, 0, 0);
+}
+
+.nav-container a {
+	padding: 0 30px 0px 30px;
+	text-decoration: none;
+	font-size: 20px;
+	color: rgb(0, 0, 0);
+}
+
+.nav-container a:hover {
+	color: rgb(0, 128, 0);
+}
+
+/*													 ------- AQUI COMIENZA EL CODIGO CSS DE MI LOGIN DE COORDINADORES ------- */
+
+main {
+	display: flex;
+	margin: 20px 40px;
+}
+
+/*.img-icfes {
+	width: 30%;
+	display: flex;
+	background-color: rgb(255, 255, 255);
+	height: 500px;
+	align-items: center;
+	justify-content: center;
+}
+
+/*.img-icfes img {
+	width: 300px;
+	padding: 20px 20px 20px 20px;
+}*/
+
+.container-form {
+	background-color: #ffffff;
+	width: 70%;
+	margin: 0 auto;
+	padding: 30px;
+	border-radius: 13px;
+	border: 2px solid rgb(0, 128, 0);
+	box-shadow: 0px 2px 3px #afafaf;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 300px;
+}
+
+.container-form h2 {
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	padding: 0px 120px 0 20px;
+	font-size: 40px;
+	color: black;
+}
+
+.container-form p {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 12px 0;
+}
+
+.container-form a {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 0 160px;
+}
+
+.container-form a:hover {
+	color: rgb(0, 128, 64);
+}
+
+
+.container-form input[type="text"],
+.container-form input[type="password"] {
+	background-color: rgba(173, 216, 230, 0.3);
+	width: 80%;
+	padding: 10px;
+	border: 1px solid rgb(0, 128, 0);
+	border-radius: 3px;
+	margin-bottom: 15px;
+	outline: none;
+}
+
+.container-form input[type="submit"] {
+	background-color: rgb(0, 128, 64);
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.container-form input[type="submit"]:hover {
+	background-color: rgb(0, 128, 0);
+}
+
+
+/*													 ------- AQUI COMIENZA EL CODIGO CSS DE MI REGISTRO DE COORDINADORES ------- */
+
+
+.form-registro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.form-registro form {
+	width: 25%;
+}
+
+.form-registro label {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.form-registro input[type="text"],
+.form-registro input[type="number"],
+.form-registro input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.form-registro input[type="submit"] {
+	background-color: rgb(0, 128, 64);
+	color: white;
+	padding: 15px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.form-registro input[type="submit"]:hover {
+	background-color: rgb(0, 128, 0);
+}
+
+/*													 ------- AQUI COMIENZA EL CODIGO CSS DE MI PAGINIA INICIO DE COORDINADORES ------- */
+
+
+.table-container {
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.table-container h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #f0f0f0;
+	font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f5f5f5;
+}
+
+td a {
+	display: inline-block;
+	padding: 8px 12px;
+	border: 1px solid rgb(0, 128, 64);
+	border-radius: 5px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 128, 64);
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+td a:hover {
+	background-color: rgb(0, 128, 64);
+		border: 1px solid #ffff;
+	color: #ffffff;
+
+}
+
+
+/*													 ------- AQUI COMIENZA EL CODIGO CSS DE MI PAGINIA INICIO DE ESTUDIANTES ------- */
+
+.btn-salir {
+	margin: 10px 0 20px 20px;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: rgb(0, 128, 64);
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn-salir:hover {
+	background-color: rgb(0, 128, 0);
+}
+
+.card.results {
+
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	width: 1300px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin: 40px auto;
+}
+
+.result-info {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.personal-info,
+.test-results,
+.level-results {
+	flex: 1;
+	margin: 0 0 0 7px;
+	padding: 5px;
+	border-right: 1px solid #ddd;
+}
+
+.level-results {
+	border-right: none;
+}
+
+.result-info p {
+	margin-bottom: 15px;
+	font-weight: normal;
+}
+
+.result-info p strong {
+	padding: 0 100px 0 0;
+	display: inline-block;
+	width: 120px;
+	font-weight: bold;
+}
+
+.card.results:nth-child(1) {
+	background-color: #f5f5f5;
+}
+
+.card.results:nth-child(2) {
+	background-color: #f0f0f0;
+}
+
+.card.results:nth-child(3) {
+	background-color: #ebebeb;
+}
+
+/*													 ------- AQUI COMIENZA EL CODIGO CSS DE MI REGISTRO DE ESTUDIANTES ------- */
+
+
+.form-student-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-estudiante {
+  font-size: 12px;
+}
+
+.input-form {
+  margin-bottom: 10px;
+}
+
+.input-form label {
+  display: inline-block;
+  width: 200px; 
+  color: #ffffff;
+}
+
+.input-form input[type="text"],
+.input-form input[type="password"],
+.input-form input[type="email"],
+.input-form input[type="tel"],
+.input-form input[type="number"] {
+	width: 300px;
+	height: 20px;
+}
+
+input[type="submit"] {
+  background-color: rgb(0, 128, 64); 
+  color: white;
+  margin:20px 0 0 200px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*													 ------- AQUI COMIENZA EL CODIGO CSS DE MI PANEL DE PROMEDIO DE RESULTADOS DE ESTUDIANTES ------- */
+
+.div-area{
+	margin-bottom: 70px;
+}
+
+.promedio-container {
+  font-size: 13px;
+  padding: 20px 20px 20px 20px; /* Add padding around the content */
+  background-color: #fff; /* Set a background color for the card */
+  border-radius: 10px; /* Add rounded corners for a card-like appearance */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+  width: max-content; /* Set the width to the actual content */
+  margin: 0 auto; /* Center the card horizontally */
+}
+
+.promedio-container p {
+  margin-bottom: 10px; /* Add spacing between paragraphs */
+}
+
+.promedio-container span {
+  font-weight: bold; /* Make the average values stand out */
+}
+
+.btn-salir-prom {
+  padding: 10px 20px; /* Add padding to the button */
+  background-color: rgb(0, 128, 64); /* Set a blue background color for the button */
+  color: #fff; /* Set white text color for the button */
+  text-decoration: none; /* Remove default button underline */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add rounded corners to the button */
+  cursor: pointer; /* Indicate that the button is clickable */
+}
+
+.btn-salir-prom:hover {
+  background-color: rgb(0, 128, 0); /* Change background color on hover */
+}
+
+
+
